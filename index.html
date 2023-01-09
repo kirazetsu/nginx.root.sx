@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>convert Text Toxic</title>
+    <center>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#convert").click(function(){
+                var text = $("#indonesian").val();
+                var jaksel = text.replace(/a/g, "j");
+                jaksel = jaksel.replace(/i/g, "k");
+                jaksel = jaksel.replace(/u/g, "s");
+                jaksel = jaksel.replace(/e/g, "l");
+                $("#jaksel").val(jaksel);
+            });
+        });
+    </script>
+</head>
+<body>
+	<body bgcolor="red">
+    <h3><marquee>Text convert perhalus toxic</h3></marquee>
+
+    <div>
+        <label for="indonesian">Input text:</label><br/>
+        <textarea id="indonesian" rows="4" cols="50"></textarea><br/>
+
+        <label for="jaksel">Result text:</label><br/>
+        <textarea id="jaksel" rows="4" cols="50" readonly></textarea><br/>
+
+        <button id="convert">Convert</button>
+    </div>
+</body>
+</html>
+</center>
